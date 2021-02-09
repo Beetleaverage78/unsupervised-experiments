@@ -74,7 +74,7 @@ function searchGif(searchQuery) {
   var api_key = "Js40wDasv9TaNwe4j6g6S2yohmdBLonn";
   var limit = 20;
 
-  var url = "http://api.giphy.com/v1/gifs/search?api_key=" + api_key + "&q=" + searchQuery + "&limit=" + limit;
+  var url = "https://api.giphy.com/v1/gifs/search?api_key=" + api_key + "&q=" + searchQuery + "&limit=" + limit;
 
   var giphyCall = new XMLHttpRequest();
   giphyCall.open('GET', url);

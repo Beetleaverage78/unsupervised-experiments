@@ -49,6 +49,7 @@ function addCollate(gif) {
   var gifBtnIcon = gif.querySelector('.img-overlay');
   gifBtnIcon.innerHTML = "";
 
+  console.log(collateList);
   collateTab.appendChild(gif);
   collateList.push(gif.querySelector('#imgSrc').src);
 }
