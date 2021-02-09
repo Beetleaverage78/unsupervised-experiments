@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Giphy Search&Collate Engine</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<a class="giphy-Link" href="https://giphy.com/" target="_blank">
+		<img class="giphy" src="assets/giphy.gif" />
+	</a>
+
+	<div class="container container-padding50">
+		<input type="text" class="js-userinput container-textinput" placeholder="Search a gif" />
+		<button title="Search Gifs" class="js-search container-searchBtn tab" onClick="toggleCollate(true)"><i
+				class="fas fa-search"></i></button>
+		<button title="Toggle Collection" class="js-collate container-collateBtn tab" onClick="toggleCollate(false)"><i
+				class="clt fas fa-file-archive"></i></button>
+		<button title="Download Collection" class="js-collate container-downloadBtn" onClick="zipZeFiles()"><i
+				class="fas fa-download"></i></button>
+	</div>
+	<div class="container container-padding50 js-searchContent">
+		<!-- Gif Card
+		<div class="container-img">
+			<img src="placeholder.png" />
+			<div class="img-overlay">
+				<button class="icon">
+					<span><i class="fas fa-plus-circle"></i></span>
+				</button>
+			</div>
+		</div>
+		-->
+
+	</div>
+	<div class="container container-padding50 collate-tab">
+		<h1 class="error-empty">its empty in here :(</h1>
+	</div>
+
+	<script src="https://kit.fontawesome.com/29ac3b55f2.js" crossorigin="anonymous"></script>
+	<script src="javascript/dist/jszip.min.js"></script>
+	<script src="javascript/dist/FileSaver.min.js"></script>
+	<script src="javascript/main.js"></script>
+	<script src="javascript/collate.js"></script>
+</body>
+
+</html>
