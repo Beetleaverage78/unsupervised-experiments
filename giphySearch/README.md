@@ -1,5 +1,5 @@
 # Giphy Search & Collate
-A small web-application that utilizes Giphy's API. It allows you to search for gifs and download them.
+A small web-application that utilizes Giphy's API. It allows you to search for gifs and download them. You can play around with it [here](https://ellanbugas.works/unsupervised-experiments/giphySearch/index.html)
 ### Libraries Used
 * [Giphy-API](https://giphy.com/)
 * [JSZip](https://stuk.github.io/jszip/)
