@@ -1,0 +1,183 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Register & Buy</title>
+  <meta name="description" content="Register & Buy Page">
+  <meta name="author" content="Ellan Bugas">
+
+  <link rel="shortcut icon" href="css/assets/logo.png"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img class="logo" src="css/assets/logotransp.png" width="164" height="141"/>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item nav-links nav-links-active" href="index.html">
+          HOME
+        </a>
+
+        <a class="navbar-item nav-links" href="products.html">
+          PRODUCTS & SERVICES
+        </a>
+
+        <a class="navbar-item nav-links" href="register.html">
+          REGISTER
+        </a>
+
+        <a class="navbar-item nav-links" href="faq.html">
+          FAQ
+         </a>
+
+      </div>
+
+      <div class="navbar-end">
+        <a id="cartShop" class="navbar-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cartCounter" class="counter"> 0 </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Register Page -->
+  <section class="register-container">
+    <div class="columns">
+      <div class="column is-two-fifths regist-detail">
+        <h1 style="font-size: 74px;">Sign up for our News Letter</h1>
+        <div style="border-bottom: #09eeb0 6px solid; width: 30%;"></div><br>
+        <h2 style="font-size: 20px;">
+          Our newsletter includes special announcements,<br>
+          such as weekly deals, new suppliers, and lots of <br>
+          really important updates!
+        </h2><br>
+        <div class="letter">
+          <input class="detInput" type="email" placeholder="Email Address">
+          <input type="submit" onclick="success('You are now subscribed!')" class="signup" value="SUBSCRIBE">
+        </div>
+      </div>
+      <div class="column is-three-fifths regist-panel">
+        <div class="regist-form">
+          <div class="switch">
+            <button onclick="switchForm(event, 'Register')" id="reg" class="switchtab">REGISTER</button>
+            <button onclick="switchForm(event, 'Buy')" id="buy" class="switchtab">BUY</button>
+          </div>
+          <!-- Form Content -->
+          <div id="Register" class="switch-content ">
+            <div class="columns">
+              <div class="column is-four-fifths reg-form">
+                <h1>Registration Details</h1>
+                <div class="reg-input columns is-multiline">
+
+                  <div class="column is-half">
+                    <label><span>*</span>First Name</label>
+                    <input id="firstName" class="reqInput" type="text" placeholder="Your Name...">
+                  </div>
+
+                  <div class="column is-half">
+                    <label><span>*</span>Last Name</label>
+                    <input class="reqInput" type="text" placeholder="Your Last Name...">
+                  </div>
+
+                  <div class="column is-half">
+                    <label><span>*</span>Login Username</label>
+                    <input class="reqInput" type="text" placeholder="Username">
+                  </div>
+
+                  <div class="column is-half">
+                    <label><span>*</span>Login Password</label>
+                    <input class="reqInput" type="password" placeholder="Password">
+                  </div>
+
+                  <div class="column is-full">
+                    <label><span>*</span>Email Address</label>
+                    <input class="reqInput" type="email" placeholder="Email Address">
+                  </div>
+
+                  <div class="column submit">
+                    <input type="submit" onclick="registerAcc()" value="REGISTER">
+                  </div>
+
+                </div>
+              </div>
+            </div>            
+          </div>
+
+          <div id="Buy" class="switch-content">
+            <div class="columns">
+              <div class="column is-four-fifths cart-title">
+                <h1>Buyer Details</h1>
+                <div class="cart-tab">
+                  <h1 class="timeOut"><span id="cd"></span></h1>
+                </div>
+                <div class="buy-input columns is-multiline">
+
+                  <div class="column is-half">
+                    <label><span>*</span>First Name</label>
+                    <input id="firstName" class="reqInput" type="text" placeholder="Your Name...">
+                  </div>
+
+                  <div class="column is-half">
+                    <label><span>*</span>Last Name</label>
+                    <input class="reqInput" type="text" placeholder="Your Last Name...">
+                  </div>
+
+                  <div class="column is-full">
+                    <label><span>*</span>Email Address</label>
+                    <input class="reqInput" type="email" placeholder="Email Adress">
+                  </div>
+
+                  <div class="column is-full payment">
+                    <label><span>*</span>Payment Method</label><br>
+                    <label class="method">Paypal</label>
+                    <input class="reqInput" checked=checked type="radio" name="payment">
+                    <label class="method">Debit/Credit</label>
+                    <input class="reqInput" type="radio" name="payment">
+                    <label class="method">Crypto</label>
+                    <input class="reqInput" type="radio" name="payment">
+                  </div>
+
+                  <div class="column is-half">
+                    <label><span></span>Coupon Code</label>
+                    <input class="reqInput" type="text" placeholder="#DAILYDROP">
+                  </div>
+
+                  <div class="column is-full">
+                    <label><span>*</span>Delivery Address</label>
+                    <input class="reqInput" type="email" placeholder="Street Name, Town/Suburb, City, Country">
+                  </div>
+
+                  <div class="column is-full submit-buy">
+                    <input type="submit" onclick="success('Heading to checkout')" value="Proceed to Checkout">
+                  </div>
+
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/29ac3b55f2.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

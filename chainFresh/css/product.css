@@ -1,0 +1,146 @@
+/* Section Header CSS */
+html {
+  background-image: url('assets/homeBg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+.area-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+.section-header-prod {
+  float: right;
+  width: 80%;
+  font-family: 'Lora', sans-serif;
+}
+
+/* Sort Tab CSS */
+.sort-container {
+  float: left;
+  width: 20%;
+  height: 1600px; /* BAD HEIGHT MANAGEMENT FOR SORT TAB */
+  color: white;
+  background-color: #1b262c;
+}
+.sort-tab {
+  padding: 30px;
+  width: 20%;
+  height: 100%;
+  position:fixed;
+}
+.sort-tab h1 {
+  font-size: 20px;
+  font-family: 'Lora', sans-serif;
+}
+.sort-tab p {
+  font-family: 'Lato', sans-serif;
+}
+.sort-category {
+  font-family: 'Rubik', sans-serif;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.sort-category i {
+  margin-top: 3px;
+  font-size: 18px;
+  float: right;
+}
+
+.sort-active {
+  color: #09eeb0;
+}
+.sort-category:hover {
+  background-color: #31444e;
+  transition: 200ms;
+}
+
+.sort-content {
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+.sort-content:hover {
+  cursor: pointer;
+  background-color:#24323a;
+}
+
+.sort-content p {
+  font-family: 'Lato', sans-serif;
+  padding: 12px 18px 12px 20px;
+}
+
+.sort-content p:hover {
+  color: #09eeb0;
+}
+
+.checkmark {
+  margin: 6px 0px 0px 0px;
+  float: right;
+  height: 15px;
+  width: 15px;
+  background-color: #334550;
+}
+.slider {
+  width: 100%;
+}
+/* ---------------------- */
+
+
+
+/* ---------------------- */
+#products {
+  color: white;
+}
+/* Product Tab CSS */
+.item {
+  padding: 30px;
+  background-color: white;
+  color: #1b262c;
+  height: auto;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item button {
+  float: right;
+  margin-top: 0px;
+  font-family: 'Rubik', sans-serif;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px 30px 8px 30px;
+  border-radius: 4px;
+  border: 3px solid #1b262c;
+  outline: none;
+  font-size: 16px;
+  transition: 200ms;
+}
+
+.item button:hover {
+  background-color: #09eeb0;
+  border-color: #09eeb0;
+  transition: 200ms;
+}
+/* ---------------------- */

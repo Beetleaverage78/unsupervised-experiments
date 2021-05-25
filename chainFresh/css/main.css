@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+  background-color: #ffffff;
+  height: auto;
+  color: black;
+}
+/* ------------------------- */
+/* Section Header CSS */
+.section-header {
+  height: 100%;
+  background-image: url('assets/homeBg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 110px;
+  text-align: center;
+  font-family: 'Lora', sans-serif;
+  color: white;
+}
+
+.section-header h2 {
+  font-family: 'Rubik', sans-serif;
+}
+
+.section-header a {
+  padding: 16px 40px 16px 40px;
+  background-color: transparent;
+  border: #d3d3d3 2px solid;
+  border-radius: 3px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: white;
+  transition: 200ms;
+}
+
+.section-header a:hover {
+  background-color: #09eeb0;
+  border: #09eeb0 2px solid;
+  color: #1b262c;
+  transition: 200ms;
+}
+/* ------------------------- */
+/* About Us Section CSS */
+.about-section {
+  background-color: #e0e0e0;
+  padding: 90px 0px 90px 110px;
+  color: #1b262c;
+  height: auto;
+}
+.detail h1 {
+  font-family: 'Rubik', sans-serif;
+}
+.detail p {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+.detail-img h1 {font-family: 'Rubik', sans-serif;}
+/* ------------------------- */
+/* Contact Section CSS */
+.contact-section {
+  background-color: white;
+  padding: 90px 0px 90px 110px;
+}
+
+.prof h1 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+
+.prof h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+.prof img {
+  width: 50%;
+}
+/* ------------------------- */

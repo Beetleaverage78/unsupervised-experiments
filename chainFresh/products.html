@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Products & Services</title>
+  <meta name="description" content="E Commerce Stuff">
+  <meta name="author" content="Ellan Bugas">
+
+  <link rel="shortcut icon" href="css/assets/logo.png"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/product.css">
+
+</head>
+
+<body>
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img class="logo" src="css/assets/logotransp.png" width="164" height="141"/>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item nav-links nav-links-active" href="index.html">
+          HOME
+        </a>
+
+        <a class="navbar-item nav-links" href="products.html">
+          PRODUCTS & SERVICES
+        </a>
+
+        <a class="navbar-item nav-links" href="register.html">
+          REGISTER
+        </a>
+
+        <a class="navbar-item nav-links" href="faq.html">
+          FAQ
+         </a>
+
+      </div>
+
+      <div class="navbar-end">
+        <a id="cartShop" class="navbar-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cartCounter" class="counter"> 0 </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+<section class="area-container">
+  <!-- Header Section -->
+  <div class="sort-container">
+    <div class="sort-tab">
+      <h1>Fresh Produce</h1> 
+      <div style="border-bottom: #09eeb0 3px solid; width: 60%;"></div>
+      <p style="font-family: 'Rubik', sans-serif;">Next batch in <span style="color: #09eeb0;">3 days</span></p><br>
+      <p>
+        Products shown have been harvested 3 days prior to being displayed.
+        This is to ensure that all our products are as fresh as possible. 
+        <a href="faq.html" target="_blank" style="color: #09eeb0 ;">
+          Learn more
+        </a>
+
+      </p><br>
+      <h1>Sort by</h1>
+      <div style="border-bottom: #09eeb0 3px solid; width: 100%;"></div>
+      <!-- Category Sort -->
+      <button type="button" class="sort-category">Category<i class="fas fa-chevron-down"></i></button>
+      <div class="sort-content">
+        <p>Fruits<span class="checkmark"></span></p>
+        <p>Vegetables<span class="checkmark"></span></p>
+        <p>Dairy Products<span class="checkmark"></span></p>
+        <p>Fresh Meat<span class="checkmark"></span></p>
+        <p>Seafood<span class="checkmark"></span></p>
+        <div style="border-bottom: #09eeb0 3px solid; width: 100%;"></div>
+      </div>
+      <!-- Price Sort -->
+      <button type="button" class="sort-category">Price<i class="fas fa-chevron-down"></i></button>
+      <div class="sort-content">
+        <p>On Sale<span class="checkmark"></span></p>
+        <p>Lowest<span class="checkmark"></span></p>
+        <p>Highest<span class="checkmark"></span></p>
+        <div style="border-bottom: #09eeb0 3px solid; width: 100%;"></div>
+      </div>
+      <!-- Size Sort -->
+      <button type="button" class="sort-category">Size<i class="fas fa-chevron-down"></i></button>
+      <div class="sort-content">
+        <p><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></p>
+        <div style="border-bottom: #09eeb0 3px solid; width: 100%;"></div>
+      </div>
+      <!-- Brands Sort -->
+      <button type="button" class="sort-category">Brands<i class="fas fa-chevron-down"></i></button>
+      <div class="sort-content">
+        <p>ANZCO<span class="checkmark"></span></p>
+        <p>Fonterra<span class="checkmark"></span></p>
+        <p>Synlait<span class="checkmark"></span></p>
+        <p>Westland Milk Products<span class="checkmark"></span></p>
+        <p>Tatua<span class="checkmark"></span></p>
+        <p>Silver Fern Farms<span class="checkmark"></span></p>
+        <p>Tegel<span class="checkmark"></span></p>
+        <div style="border-bottom: #09eeb0 3px solid; width: 100%;"></div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="section-header-prod">
+    <div id="products" class="columns">
+      <!-- Items Section -->
+      <div class="column columns is-multiline">
+
+        <!-- Template for Product Cards
+        <div class="column is-one-quarter">
+          <div class="item">
+            <img title="" alt="" src="imgsrc"/>
+            <h1>Product Title Long Name</h1>
+            <span>$0.00</span>
+            <button>BUY</button>
+          </div>
+        </div>
+        --> 
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+  <script src="https://kit.fontawesome.com/29ac3b55f2.js" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

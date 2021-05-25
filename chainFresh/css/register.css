@@ -1,0 +1,219 @@
+/* Section Header CSS */
+body {
+  background-image: url('assets/homeBg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 1000px;
+}
+
+.register-container {
+  padding: 30px;
+}
+
+/* CSS for Detail Area*/
+.regist-detail {
+  padding: 30px;
+  color: white;
+}
+
+.regist-detail h1 {
+  font-family: 'Lora', sans-serif;
+}
+
+.letter input {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+}
+
+.signup {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  width: auto;
+  background-color: #03b686;
+  color: white;
+  padding: 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup:hover {
+  background-color: #09eeb0;
+  color: #1b262c;
+}
+
+
+
+
+/* CSS for Form Area*/
+.regist-form {
+  padding: 0px 30px 30px 30px;
+  border-radius: 16px;
+  color: #1b262c;
+  background-color: white;
+}
+
+.switch {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.switch button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  transition: 200ms;
+}
+
+.switch button:hover {
+  border-bottom: #09eeb0 solid 4px; 
+}
+
+.switch button.active {
+  border-bottom: #1b262c solid 4px; 
+}
+
+.switch-content {
+  display: none;
+  width: auto;
+  border: 1px solid #ccc;
+}
+
+/* REGISTRATION CSS */
+.reg-form {
+  padding: 0px 0px 20px 0px;
+  font-size: 18px;
+}
+.reg-form h1 {
+  padding: 34px;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+}
+
+.reg-input {
+  padding-bottom: 20px;
+}
+.reg-input .is-half label,  .reg-input .column label {
+  padding-left: 34px;
+  font-family: 'Rubik', sans-serif;
+}
+.reg-input .is-half label span, .reg-input .column label span {
+  color: #09eeb0; 
+}
+
+.reg-input .is-half input[type=text],  .reg-input .is-half input[type=password],
+.reg-input .column input[type=email] {
+  margin-left: 34px;
+  padding: 10px;
+  width: 100%;
+}
+
+.reg-input .is-half input:focus, .reg-input .column input:focus {
+  outline: none !important;
+  border: #09eeb0 2px solid; 
+}
+
+.submit input[type=submit] {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  background-color: #03b686;
+  color: white;
+  padding: 14px 20px;
+  margin-left: 34px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit input:hover {
+  background-color: #09eeb0;
+  color: #1b262c;
+}
+/*-------------------------*/
+
+
+/* BUYER CSS */
+
+.cart-title {
+  font-size: 18px;
+}
+.cart-title h1 {
+  padding: 20px;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+}
+
+.buy-input input {
+  padding-bottom: 20px;
+}
+.buy-input .is-half label,  .buy-input .column label {
+  padding-left: 20px;
+  font-family: 'Rubik', sans-serif;
+}
+.buy-input .is-half label span, .buy-input .column label span {
+  color: #09eeb0; 
+}
+
+.buy-input .is-half input[type=text],  .buy-input .is-half input[type=password],
+.buy-input .column input[type=email] {
+  margin-left: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.buy-input .is-half input:focus, .buy-input.column input:focus {
+  outline: none !important;
+  border: #09eeb0 2px solid; 
+}
+
+.payment input[type=radio] {
+  margin-left: 8px;
+}
+.method {
+  margin-left: 4px;
+}
+
+
+.submit-buy input[type=submit] {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  background-color: #03b686;
+  color: white;
+  padding: 14px 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-buy input:hover {
+  background-color: #09eeb0;
+  color: #1b262c;
+}
+
+.timeOut {
+  background-color: rgb(238, 238, 238);
+  border: 2px solid black;
+  margin-left: 20px;
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+/*-------------------------*/
