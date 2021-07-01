@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Alignment</title>
+	<!--CSS Links and Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Main CSS Link-->
+	<link rel="stylesheet" href="css/main.css">
+  </head>
+  
+<body>
+	<!--Navigation Bar-->
+	<div class="navimg">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Ellanbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" title="St Bernards College" href="https://www.sbc.school.nz/" target="_blank">SBC</a>
+				<a class="btn btn-primary navbar-btn" title="Web Mail" alt="Web Mail" href="https://mail.sbc.school.nz/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.sbc.school.nz%2fowa%2f" target="_blank">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse" id="Ellanbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contrast.html">Contrast</a></li>
+				<li><a href="repetition.html">Repetition</a></li>
+				<li><a class="active" href="alignment.html">Alignment</a></li>
+				<li><a href="proximity.html">Proximity</a></li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+	<!--End Of Navigation-->
+	
+	<!--Page-Header-->
+	<div class="container">
+		<div class="page-header heading">
+			<h1 class="ubuntu" style="font-size: 60px;">Alignment</h1>
+			<p style="opacity: 0.5; padding-left: 10px;">Design Principles</p>
+		</div>
+	</div>
+	</div>
+	
+	<!--Alignment-Info-->
+	<div id="Alignment-Info" class="container">
+		<header class="page-header"><strong>Alignment</strong></header>
+		<!--Alignment Image-->
+		<img id="myImg" title="Alignment" class="img-responsive pull-right"
+		style="width: 370px;"
+		src="css/Assets/alignmentimg.png"/>
+		
+			<p>Alignment creates a <strong>sharper</strong>, more <strong>ordered</strong> design.</p>
+			
+			<ul>
+			<li><p>Aligning elements allows them to create a visual connection with each other. 
+			It tightens the design and eliminates the haphazard, 
+			messy effect which comes when items are placed randomly.</p></li>
+
+			<li><p>Aligning elements which are not in close proximity with each other, 
+			helps to provide an invisible connection between them.</p></li>
+
+			<li><p>Alignment is one of the most basic and important principles of design. 
+			It allows us to create order and organisation among elements.</p></li>
+			
+			</ul>
+
+			<p>Using a CSS framework such as Bootstrap allows you to create columns on a web page easily to organize your text and images with Alignment.  
+			The page is split into 12 columns (i.e. 12 spaces available vertically). 
+			So if you specify a row with the column width of 4 then it will be 4/12 or a 1/3 of the page wide. 
+			If you make it 6/12 wide then you can have 2 even columns.</p>
+			
+			<!--Link to Inspired Image-->
+			<a class="btn btn-primary" target="_blank" style="margin-left: 6px;"
+			href="https://www.google.co.nz/search?safe=strict&dcr=0&site=imghp&tbs=sur%3Afmc&tbm=isch&sa=1&ei=0fX4WdGHH8Kn0gSFhYSIDQ&q=Street+Signs+png&oq=Street+Signs+png&gs_l=psy-ab.3..0l10.6170.6952.0.7069.4.4.0.0.0.0.232.427.0j1j1.2.0....0...1.1.64.psy-ab..2.2.426...0i67k1.0.8sQYy_cWyYw#imgrc=fL6LgMLDoRuV5M:">
+				Image-Reference
+			</a><h6 class="pull-left" style="color: grey;"> - Made With Adobe Photoshop </h6>
+			<p>
+			
+			<div id="snackbar">Click the Image to Enlarge it</div>
+			<!--Modal-->
+			<div id="myModal" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="img01">
+				<div id="caption"></div>
+			</div>
+	</div>
+	
+	<!--Footer-->
+	<section class="container footer">
+		<footer>
+		<br>
+		<h4><strong>Learn More</strong></h4>
+		<br>
+		<div class="btn-group btn-group-md btn-group-justified" style="margin: auto; width: 66%;">
+			<a href="contrast.html" target="_blank" class="btn btn-default">Contrast</a>
+			<a href="repetition.html" target="_blank" class="btn btn-default">Repetition</a>
+			<a href="proximity.html" target="_blank" class="btn btn-default">Proximity</a>
+		</div>
+		<br>
+		<p style="color: grey;"> © C.R.A.P. Design Principles 2017</p>
+		</footer>
+	</section>
+
+<!--SnackBar JS-->
+<script>
+   var x = document.getElementById("snackbar")
+   x.className = "show";
+   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+</script>
+<!--Modal JS-->
+<script>
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+</script>
+</body>
+</html>

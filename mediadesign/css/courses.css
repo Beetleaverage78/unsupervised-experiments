@@ -1,0 +1,92 @@
+body {
+	background-color: #212329;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* Heading Section */
+.header h1{
+	margin-top: 80px;
+	font-size: 34px;
+	font-family: 'Capriola', serif;
+	text-align: center;
+}
+
+/* Main Section */
+.main-content {
+	margin-top: 120px;
+    
+	height: auto;
+	font-family: 'Overpass', serif;
+	background-color: white;
+	color: black;
+}
+
+/* Student Section */
+.student-sect {
+	background-color: #394262;
+    padding: 30px;
+}
+
+.btn-group .btn {
+    background-color: #9bb0d1; 
+    border: 2px solid black; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+    text-decoration: none;
+}
+
+.btn-group .btn:not(:last-child) {
+    border-right: none; 
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-group a {text-decoration: none; color: white; font-weight: bold;}
+
+.btn-group a:hover {color: cadetblue;}
+
+/* Main & Student Section CSS */
+.main-content .row .col-md-6, 
+.student-sect .row .col-md-6 {
+	max-width: 600px;
+	height: auto;
+	margin: auto;
+}
+
+.main-content .row .col-md-6 img{
+	width: 560px;
+}
+.main-content div div h2, 
+.student-sect div div {
+	font-family: 'Overpass', sans-serif;
+}
+
+.section-separator {
+	margin-left: 0;
+	border-bottom: 6px solid black;
+	width: 100px;
+}
+
+/*Responsive CSS for Small Screens*/
+@media only screen and (max-width: 700px) {
+    .main-content .row .col-md-6 {
+        padding: 30px 30px 30px 30px;
+    }
+    main-content .row .col-md-6 img {
+        width: 460px;
+    }
+    .letter {
+        width: 300px;
+    }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Title and Meta Tags -->
+	<title>Contact - Media Design</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Stylesheet & Script Links -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+</head>
+    
+<body>
+	<!-- Navigation Bar Code -->
+	<div id="overlaynav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+		<a href="creative.html">Creative Coding</a>
+		<a href="game.html">Game Design</a>
+		<a href="video.html">Video Design</a>
+		<a class="active" href="contact.html">Contact</a>
+	  </div>
+	</div>
+	
+	<!-- Logo & Burger Icon -->
+    <a href="index.html"><img class="logo" alt="Logo" src="images/logo.png"/></a>
+	<span class="burger-icon" onclick="openNav()"><img title="Click to Open" alt="burger-icon" src="images/burger.png"/></span>
+    
+	<!-- Overlapping Boxes Code -->
+    <div class="center-boxes">
+        <div class="row">
+			<!-- Outer Box Code -->
+            <div class="col-sm-4">
+                <div class="box outer">
+                    <h2>Contact</h2>
+                    <div class="row">
+                        <div class="col-xs-6">
+						<!-- Useful Links -->
+                        <img alt="Icon/Logo" src="images/email.png"/>
+                            <p>
+                                <a>Media Design</a>
+                                <br><a href="" class="scn-contact">@supposedemail</a>
+                            </p>
+                        <br>
+                        <img alt="Icon/Logo" src="images/email.png"/>
+                            <p>
+                                <a>Companies</a>
+                                <br><a href="" target="_blank" class="scn-contact">@supposedemail</a>
+                            </p>        
+                        <br> 
+						
+						<!-- University Website Links -->
+                        <span style="font-size: 24px; border-bottom: 2px solid white;"> Universities</span>
+                        
+						<div class="uni-links">
+							<p><a href="https://www.victoria.ac.nz/" target="_blank">Victoria University</a></p>
+							<p><a href="https://www.massey.ac.nz/massey/student-life/about-our-campuses/wellington-campus/wellington-campus_home.cfm" target="_blank">Massey University</a></p> 
+							<p><a href="https://www.otago.ac.nz/" target="_blank">Otago University</a></p> 
+							<p><a href="https://www.harvard.edu/" target="_blank">Harvard University</a></p>
+                        </div>
+                        </div>
+                        
+						<!-- References and Developer Contact -->
+                        <div class="col-xs-6">
+                            <a>Ellan Bugas</a>
+                            <span><br>-<strong>Web Developer</strong></span>
+                            <a class="scn-contact">@supposedemmail</a>                       
+                            <p></p>
+                            <a>Ehnel Bugas</a>
+                            <span style="font-size: 14px;"><br>-<strong>Media Design Student</strong></span>
+                            <a class="scn-contact">@supposedemmail</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Inner Box Code -->
+            <div class="col-sm-8 box-small">
+                <div class="inner ">
+					<h2>Or send a message!</h2>
+					<div class="row around-xs">
+						 <input class="col-xs-6" type="text" name="name" placeholder="Name">
+						 <input class="col-xs-6" type="text" name="email" placeholder="Email">
+					</div>
+					<textarea rows="4" cols="50" placeholder="Message"></textarea>
+                    
+                    <button>Submit</button>
+					
+					<p><a href="https://forms.gle/WzTNGaoN8tMieA729" target="_blank">Google Forms & Feedback</a></p>
+				</div>
+            </div>
+        </div>
+    </div>
+
+<script><!-- JS Script for full page overlay navigation bar -->
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+function openNav() {document.getElementById("overlaynav").style.height = "100%";}
+function closeNav() {document.getElementById("overlaynav").style.height = "0%";}
+</script>
+</body>
+</html>

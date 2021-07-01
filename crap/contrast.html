@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Contrast</title>
+	<!--CSS Links and Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Main CSS Link-->
+	<link rel="stylesheet" href="css/main.css">
+  </head>
+  
+<body>
+	<!--Navigation Bar-->
+	<div class="navimg">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Ellanbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" title="St Bernards College" href="https://www.sbc.school.nz/" target="_blank">SBC</a>
+				<a class="btn btn-primary navbar-btn" title="Web Mail" alt="Web Mail" href="https://mail.sbc.school.nz/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.sbc.school.nz%2fowa%2f" target="_blank">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse" id="Ellanbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="contrast.html">Contrast</a></li>
+				<li><a href="repetition.html">Repetition</a></li>
+				<li><a href="alignment.html">Alignment</a></li>
+				<li><a href="proximity.html">Proximity</a></li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+	<!--End Of Navigation-->
+	
+	<!--Page-Header-->
+	<div class="container">
+		<div class="page-header heading">
+			<h1 class="ubuntu" style="font-size: 60px;">Contrast</h1>
+			<p style="opacity: 0.5; padding-left: 10px;">Design Principles</p>
+		</div>
+	</div>
+	</div>
+	
+	<!--Main Contrast Info-->
+	<div id="Contrast-Info" class="container">
+		<header class="page-header"><strong>Contrast</strong></header>
+		<!--Contrast Image-->
+		<img title="Contrast" id="myImg" class="img-responsive pull-right"
+		style="width: 370px;"
+		src="css/Assets/contrastimg.png"/>
+		
+		<p>Contrast allows you to emphasize or highlight key elements within your design.</p>
+		
+		<blockquote><p><strong>"Contrast is created when two elements are total opposites."</strong></p></blockquote>
+		
+		<p>This doesn’t necessarily have to be colours either. 
+		It can be achieved with <strong>fonts</strong> (classic/contemporary), 
+		<strong>lines</strong> (thick/thin) and <strong>shapes</strong> (big/small), just to name a few.</p>
+		
+		<p>Contrast plays a crucial part in the organisation of information on a page.</p> 
+		<p>It will guide the reader to where they should look first or to the most important element.</p>
+		<p>For it to work successfully though, it must be strong and obvious. It needs to make an impact.</p>
+		
+		<!--Link to Inspired Image-->
+		<a class="btn btn-primary" target="_blank" style="margin-left: 6px;"
+		href="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5f/Vel%27Koz_OriginalSkin.jpg/revision/latest?cb=20170615225859">
+			Image-Reference
+		</a><h6 class="pull-left" style="color: grey;"> - Made With Adobe Illustrator </h6>
+		<p>
+		
+		<div id="snackbar">Click the Image to Enlarge it</div>
+		<!--Modal-->
+		<div id="myModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+		</div>
+		<br>
+
+	</div>
+
+	<!--Footer-->
+	<section class="container footer">
+		<footer>
+		<br>
+		<h4><strong>Learn More</strong></h4>
+		<br>
+		<div class="btn-group btn-group-md btn-group-justified" style="margin: auto; width: 66%;">
+			<a href="repetition.html" target="_blank" class="btn btn-default">Repetition</a>
+			<a href="alignment.html" target="_blank" class="btn btn-default">Alignment</a>
+			<a href="proximity.html" target="_blank" class="btn btn-default">Proximity</a>
+		</div>
+		<br>
+		<p style="color: grey;"> © C.R.A.P. Design Principles 2017</p>
+		</footer>
+	</section>
+
+<!--SnackBar JS-->
+<script>
+   var x = document.getElementById("snackbar")
+   x.className = "show";
+   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+</script>
+<!--Modal JS-->
+<script>
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>

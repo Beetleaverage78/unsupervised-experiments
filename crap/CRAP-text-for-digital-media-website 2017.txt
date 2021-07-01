@@ -1,0 +1,56 @@
+This text (below #-line) is for 1.43 Digital Media website Assessment.
+
+It is saved in the J drive so you don’t need to type it.
+This website is for students of St Bernard's College who are studying DVC (Design Visual Communication) to help them learn C.R.A.P.
+It will explain and illustrate the Design Principles of Contrast, Repetition, Alignment & Proximity.
+
+You will need to include media you have made, e.g. bitmap (Photoshop) and Vector (illustrator) graphics. 
+- Save them for web as PNGs, JPGs or GIFs. 
+- Remember to apply appropriate format, size and orientation to your media files (incl. images files)
+ 
+NOTE: You must include the following Resource Information on your website.
+#########################################################################################################################
+
+ 
+Contrast
+Contrast allows you to emphasize or highlight key elements within your design. Contrast is created when two elements are total opposites. This doesn’t necessarily have to be colours either. It can be achieved with fonts (classic/contemporary), lines (thick/thin) and shapes (big/small), just to name a few.
+
+Contrast plays a crucial part in the organisation of information on a page. It will guide the reader to where they should look first or to the most important element. For it to work successfully though, it must be strong and obvious. It needs to make an impact.
+
+
+
+Repetition
+The image on the right was made by me to demonstrate Repetition. I made it in Adobe Illustrator. It is in the style of Wellingtonian artist Gordon Walters.
+
+Visscom describes the Principle of Repetition as the following:
+
+“ The principle of repetition simply means the reusing of the same or similar elements throughout your design. Repetition of certain design elements in a design will bring a clear sense of unity, consistency, and cohesiveness.
+
+REPITITION is the use of similar or connected pictorial elements.  For example, similar shapes, colours or lines that are used more than once.  
+
+REPETITION can be regular or irregular and even or uneven. 
+
+REPETITION can be in the form of RADIATION where the repeated elements spread out from a central point. REPETITION may be in the form of GRADATION where the repeated elements slowly become smaller or larger.
+
+Repetition works with pattern to make the artwork seem active. The repetition of elements of design creates unity within the artwork.
+
+Patterns often occur in nature, and artists use similar repeated motifs to create pattern in their work. Pattern increases visual excitement by enriching surface interest. ”
+
+The quoted text above is from https://visscom.wordpress.com/2013/04/16/principle-of-repetition-pattern/ 
+
+
+Alignment
+Aligment creates a sharper, more ordered design. Aligning elements allows them to create a visual connection with each other. It tightens the design and eliminates the haphazard, messy effect which comes when items are placed randomly.
+
+Aligning elements which are not in close proximity with each other, helps to provide an invisible connection between them.
+
+Alignment is one of the most basic and important principles of design. It allows us to create order and organisation among elements.
+
+Using a CSS framework such as Bootstrap allows you to create columns on a web page easily to organize your text and images with Alignment.  The page is split into 12 columns (i.e. 12 spaces available vertically). So if you specify a row with the column width of 4 then it will be 4/12 or a 1/3 of the page wide. If you make it 6/12 wide then you can have 2 even columns.
+
+
+
+Proximity
+Proxemity helps create organisation. By grouping similar elements together or in close proximity, you create a relationship between those elements. It also provides a focal point and can give the reader and idea of where they should start and finish reading.
+
+Proximity doesn’t mean that elements have to be placed together, it means they should be visually connected in someway. This can be by use of point size, font, colour etc… Using CSS to have an image placed amongst the text with a text wrap or image float left ) uses Proximity to create a design feature.

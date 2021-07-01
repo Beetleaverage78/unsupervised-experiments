@@ -1,0 +1,299 @@
+import datetime module as dt
+import tkinter module as tk
+Within tkinter module, import ttk and import messagebox as mg
+
+SET COOKIES_PRICE to $16.20
+SET CUPCAKES_PRICE to $21.00
+SET CAKE_PRICE to $59.50
+SET TRAVEL_FEE to $10.00
+
+SET COOKIES_MAX to 10
+SET CUPCAKES_MAX to 10
+SET CAKE_MAX to 10
+
+SET date variable to the date today
+
+Define name_method function and pass fname and lname as parameters:
+    SET judge to 'missing'
+    SET f_count to 0
+    SET l_count to 0
+    IF fname is equal to "" and lname does not equal to "": THEN
+        SET msg to "Missing Customer's First Name"
+        AND return judge, msg
+    ELSE IF lname is equal to "" and fname does not equal to "": THEN
+        SET msg to "Missing Customer's Last Name"
+        AND return judge, msg
+    ELSE IF fname and lname is equal to "": THEN
+        SET msg to "Missing Customer's First & Last Name"#
+        AND return judge, msg
+
+    Show user with messagebox "Processing Customer Details"
+    IF the length of fname is less than 2: THEN
+        SET judge to FALSE
+        SET msg to "First Name is too short"
+        AND return judge, msg
+    ELSE IF the length of fname is greater than 10: THEN
+        SET judge to FALSE
+        SET msg to "First name" is too long"
+    ELSE IF the length of lname is less than 2: THEN
+        SET judge to FALSE
+        SET msg to "Last Name is too short"
+        AND return judge, msg
+    ELSE IF the length of lname is greater than 10: THEN
+        SET judge to FALSE
+        SET msg to "Last name is too long"
+        AND return judge, msg
+
+    FOR every letter in fname:
+        IF that letter is a space: THEN
+            Add 1 to f_count
+    FOR every letter in lname:
+         IF that letter is a space: THEN
+             Add 1 to l_count
+    
+    IF f_count and l_count is greater than 0: THEN
+        SET judge to FALSE
+        SET msg to "There are spaces in the First & Last Name of the customer"
+        AND return judge, msg
+    ELSE IF f_count is greater than 0: THEN
+        SET judge to FALSE
+        SET msg to "There are spaces in the First Name of the customer"
+        AND return judge, msg
+    ELSE if l_count is greater than 0: THEN
+        SET judge to FALSE
+        SET msg to "There are spaces in the Last Name of the customer"
+        AND return judge, msg
+    ELSE:
+        IF fname and lname is in the alphabet: THEN
+            SET judge to TRUE
+            SET msg to "Valid Customer Details"
+            AND return judge, msg
+        ELSE IF fname and lname is not in the alphabet: THEN
+            SET judge to FALSE
+            SET msg to "First & Last Name is Invalid"
+        ELSE IF fname is a digit or not in alphabet: THEN
+            SET judge to FALSE
+            SET msg to "First Name is Inavlid"
+            AND return judge, msg
+        ELSE if lname is a digit or not in alphabet: THEN
+            SET judge to FALSE
+            SET msg to "Last Name is Invalid"
+            AND return judge, msg
+
+Define calculate_method function and pass order, price, count, and order_max as parameters:
+    SET sub_total to 0
+    Add order to count
+    IF count is less than or equal to 0: THEN
+        SET judge to FALSE
+        AND return judge, sub_total
+    ELSE IF count is greater than order_max: THEN
+        SET judge to TRUE
+        AND return judge, sub_total
+    ELSE IF count is greater than 0: THEN
+        SET judge to TRUE
+        Multiply count and price and store in sub_total
+        AND return judge, sub_total
+
+Create a class called DonutGui and pass tk.Frame:
+    Define the __init__ method and pass self, master as parameters:
+        SET tk.Frame to __init__ parameters
+        SET self.root to master
+        Call self.init_window method
+
+    Define the variables method and pass self as a parameter:
+        SET cookies_count, cookies_total, cupcakes_count,
+        cupcakes_total, cakes_count, cakes_total,
+        and var1, var2, var3 to GLOBAL
+
+        SET cookies_count to 0
+        SET cookies_total to 0
+        
+        SET cupcakes_count to 0
+        SET cupcakes_total to 0
+
+        SET cakes_count to 0
+        SET cakes_total to 0
+
+        SET var1 as a IntVar
+        SET var2 as a IntVar
+        SET var3 as a IntVar
+
+        SET var1 to 0
+        SET var2 to 0
+        SET var3 to 0
+
+    Define the reset method and pass self as a parameter:
+        Ask user "Do you want to reset the program" and store response in check
+        IF check is equal to TRUE: THEN
+            Call self.init_window method
+        ELSE:
+            Show user messagebox "Okay, program will resume"
+
+    Define the process_orders method and pass self as a parameter:
+        Ask user "Is this the final order?" and store response in check
+        IF check is equal to TRUE: THEN
+            CONTINUE the program
+        ELSE: THEN
+            Stop the function (return)
+        Create a Infinite Loop:
+            GET self.fname_entry and store in fname
+            GET self.lname_entry and store in lname
+            Call name_method and pass fname and lname as arguments
+            and store returned variables in judge and msg
+            IF judge is equal to TRUE: THEN
+                Show user messagebox with text from msg
+                break out of loop
+            ELSE IF judge is equal to FALSE:
+                Show user messagebox with text from msg
+                Stop the function (return)
+            ELSE:
+                Show user messagebox with text from msg
+                Stop the function (return)
+
+        SET orders to {} as an empty dictionary
+        ADD a key to orders that is 'Cookies' and a value as a list of cookies_count and cookies_total
+        ADD a key to orders that is 'Cupcakes' and a value as a list of cupcakes_count and cupcakes_total
+        ADD a key to orders that is 'Cakes' and a value as a list of cakes_count, and cakes_total
+        Show user messagebox of orders dictionary
+        Open order_book.txt and store temporarily as order_book
+        Write to order_book the date
+        Write to order_book the First & Last Name of customer
+        Write to order_book the order dictionary
+        Write to order_book the Total Cost
+        CLOSE order_book
+        Show user messagebox "Program will now reset to prepare for another order"
+        Call self.init_window method
+
+    Define the calculate method and pass self as a parameter:
+        SET judge to 0
+        SET total to 0
+        SET total_cost to 0
+
+        GET var1 and store in cookies
+        IF cookies does not equal 0: THEN
+            Call calculate_method and pass cookies, COOKIES_PRICE, cookies_count, and COOKIES_MAX as arguments
+            and store returned variables as judge and total.
+            IF judge is equal to TRUE: THEN
+                ADD cookies to cookies_count
+                SET cookies_total equal to total
+                Update the cookies_sub_label to cookies_total
+                Update the cookie_pack_label to cookies_count
+            ELSE: THEN
+                Show user "That is more than 10 Cookie Packs, You are trying to order {} more, WHen you have already {}"
+                and format cookies and cookies_count
+        ELSE:
+            IF cookies_count is greater than 0: THEN
+                Update the cookies_sub_label to cookies_total
+        GET var2 and store in cupcakes
+        IF cupcakes does not equal 0: THEN
+            Call calculate_method and pass cupcakes, CUPCAKES_PRICE, cupcakes_count, and CUPCAKES_MAX as arguments
+            and store returned variables as judge and total.
+            IF judge is equal to TRUE: THEN
+                ADD cupcakes to cupcakes_count
+                SET cupcakes_total to total
+                Update the cupcakes_sub_label to cupcakes_total
+                Update the cupcakes_pack_label to cupcakes_count
+            ELSE:
+                Show user "That is more than 10 Cupcake Packs, You are trying to order {} more, WHen you have already {}"
+                and format cupcakes and cupcakes_count
+        ELSE:
+            IF cupcakes_count is greater than 0: THEN
+                Update the cupcakes_sub_label as cupcakes_total
+        GET var3 and store in cakes
+        IF cakes does not equal 0: THEN
+            Call calculate_method and pass cakes, CAKE_PRICE, cakes_count, and CAKE_MAX as arguments
+            and store returned variables as judge and total.
+            IF judge is equal to TRUE: THEN
+                ADD cakes to cakes_count
+                SET cakes_total to total
+                Update the cakes_sub_label to cakes_total
+                Update the cake_pack_label to cakes_count
+            ELSE:
+                Show user "That is more than 10 Cake Packs, You are trying to order {} more, WHen you have already {}"
+                and format cakes and cakes_count
+        ELSE:
+            IF cupcakes_count is greater than 0: THEN
+                Update the cakes_sub_label as cupcakes_total
+
+        SET var1 to 0
+        SET var2 to 0
+        SET var3 to 0
+
+        IF cookies or cupcakes or cakes is greater than 0: THEN
+            Change the state of process_button to normal
+            Set total_cost equal to the sum of cookies_total, cupcakes_total, cakes_total and TRAVEL_FEE
+            Update the total_label to total_cost
+            Update output_frame text to "Output: Successful Calculation"
+        ELSE:
+            Update output_frame text to "Output: No Orders were made"
+            Show user "No Orders were made"
+
+    Define the init_window method and pass self as a parameter:
+        Call variables method
+        SET var1, var2 and var3 as GLOBAL VARIABLES
+        SET order_quantity to list with values from 0-10
+        SET cake_quantity to list with values from 0-5
+
+        SET window title to "Bakery Order Calculator"
+
+        Create two Horizontal Seperators
+
+        Create a tk Button called reset_button with text 'Reset' that calls the reset method
+        Create a tk Button called exit_button with text 'Exit' that calls the exit method
+        Create a tk Button called process_button with text 'Process Orders' and set its state to disabled
+        and when clicked, call process_orders method
+        Create a tk Button called calculate_button with text 'Calculate' that calls calculate method
+
+        Create a tk LabelFrame called output_frame with text 'Output: No Orders were Made'
+        Within the output_frame {
+            Create a tk Label called cookie_pack_label with text 'Cookie Packs: 0'
+            Create a tk Label called cupcake_pack_label with text 'Cupcake Packs: 0'
+            Create a tk Label called cake_label with text 'Cakes: 0'
+        }
+
+        Create a tk LabelFrame called total_frame with text ='Total Cost + ${} Travel_Fee' and format TRAVEL_FEE
+        Within the total_frame {
+            Create a tk Label called total_label with text '$0.00'
+        }
+
+        Create a tk LabelFrame called customer_frame with text 'Customer Details'
+        Within the customer_frame {
+            Create a tk Label called fname_label with text 'First Name'
+            Create a tk Entry called fname_entry
+
+            Create a tk Label called lname_label with text 'Last Name'
+            Create a tk Entry called lname_entry
+        }
+        
+        Create a tk OptionMenu cookies_entry
+        and use var2 as the storing variable
+        Create a tk LabelFrame called cookies_sub_frame with text 'Sub Total'
+        Within the cookies_sub_frame Create a tk Label called cookies_sub_label
+        with text '$0.00'
+
+        Create a tk OptionMenu called cupcakes_entry
+        and use var2 as the storing variable
+        Create a tk LabelFrame called cupcakes_sub_frame with text 'Sub Total'
+        Within the cupcakes_sub_frame Create a tk Label called cupcakes_sub-label
+        with text '$0.00'
+
+        Create a tk OptionMenu called cakes_entry
+        and use var2 as the storing variable
+        Create a tk LabelFrame called cakes_sub_frame with text 'Sub Total'
+        Within the cakes_sub_frame Create a tk Label called cakes_sub_label
+        with text '$0.00'
+
+        Create a tk Label with text of the current date
+        Create a tk Label with text 'Cookie & Cupcake Max is 10 - Min 0. Cakes Max is 5 - Min 0'
+        Create a tk Label with text 'Cookie Pack of 12 - ${} each pack'
+        Create a tk Label with text 'Cupcake Pack of 6- ${} each pack'
+        Create a tk Label with text 'Single Cake - ${} each'
+            
+        FOR child in tk window
+            Add 10padx and 10pady
+
+IF __name__ is equal to '__main__':
+    Infinite While Loop
+        SET root to tkinter window
+        SET gui to DonutGuiClass
+        MAKE root go on a mainloop

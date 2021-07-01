@@ -1,0 +1,54 @@
+import the datetime module as dt
+import the tkinter module as a tk
+import the ttk module
+
+Set COOKIES_PRICE to $16.20
+Set CUPCAKES_PRICE to $21.00
+Set CAKE_PRICE to $59.50
+
+Set date to current date today.
+
+Create DonutGui class and pass ttk.Frame as an argument:
+
+    Define __init__ function and pass self, master, exit_program, and *args, **kwargs:
+        Set ttk.Frame to init arguments
+        Set self.root to master (since master is root/tkinter window)
+        Call init_window, while passing self.
+
+    Define init_window function and pass self:
+        Set the title of the window as "Donut Order Calculator"
+        Set the grid of the window to 0 columns and 0 row, with nsew sticky
+
+        Create two horizontal seperators with 4 rows of a gap between them
+
+        Create a LabelFrame called output_frame with text "Output"
+        Within the LabelFrame create a Label called output_label
+
+        Create a LabelFrame called total_frame with text "Total Cost"
+        Within the LabelFrame create a Label called total_label
+
+        Create a LabelFrame called customer_frame with text "Customer Details"
+        Within the LabelFrame {
+            Create a Label called fname_label with text "First Name"
+            Create an EntryBox called fname_entry
+
+            Create a Label called lname_label with text "Last Name"
+            Create an EntryBox called lname_entry
+
+        Create a EntryBox called cookies_entry
+        Create a LabelFrame called cookies_sub_frame with text "Sub Total"
+        Within the LabelFrame create a Label called cookies_sub_label
+
+        Create a EntryBox called cupcakes_entry
+        Create a  LabelFrame called cupcakes_sub_frame with text "Sub Total"
+        Within the LabelFrame create a Label called cupcakes_sub_label
+
+        Create a EntryBox called cakes_entry
+        Create a  LabelFrame called cakes_sub_frame with text "Sub Total"
+        Within the LabelFrame create a Label called cakes_sub_label
+
+        for every element in this window
+            add paddingx 10 and paddingy 10
+
+        
+        

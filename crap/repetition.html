@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Repetition</title>
+	<!--CSS Links and Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Main CSS Link-->
+	<link rel="stylesheet" href="css/main.css">
+  </head>
+  
+<body>
+	<!--Navigation Bar-->
+	<div class="navimg">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Ellanbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" title="St Bernards College" href="https://www.sbc.school.nz/" target="_blank">SBC</a>
+				<a class="btn btn-primary navbar-btn" title="Web Mail" alt="Web Mail" href="https://mail.sbc.school.nz/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.sbc.school.nz%2fowa%2f" target="_blank">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse" id="Ellanbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contrast.html">Contrast</a></li>
+				<li><a class="active" href="repetition.html">Repetition</a></li>
+				<li><a href="alignment.html">Alignment</a></li>
+				<li><a href="proximity.html">Proximity</a></li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+	<!--End Of Navigation-->
+	
+	<!--Page-Header-->
+	<div class="container">
+		<div class="page-header heading">
+			<h1 class="ubuntu" style="font-size: 60px;">Repetition</h1>
+			<p style="opacity: 0.5; padding-left: 10px;">Design Principles</p>
+		</div>
+	</div>
+	</div>
+	
+	<!--Repetition-Info-->
+	<section class="container">
+		<header class="page-header"><strong>Repetition</strong></header>
+		
+		<!--Repetition-Image-->
+		<img id="myImg" title="Repetition" class="img-responsive pull-right" style="height: 225px;"
+		src="css/Assets/repetitionimg.png"/>
+		<p>The image on the right was made by me to demonstrate Repetition. I made it in Adobe Illustrator. 
+		It is in the style of Wellingtonian artist Gordon Walters.</p>
+		
+	<div>
+		<div id="Repetition-Info">
+	
+			<p>Visscom describes the <strong>Principle of Repetition</strong> as the following:</p>
+			<blockquote style="font-size: 14px text-decoration: strong;">
+			<strong>
+			“ The principle of repetition simply means the reusing of the same or similar elements throughout your design. 
+			Repetition of certain design elements in a design will bring a clear sense of unity, consistency, and cohesiveness. "
+			</strong>
+			</blockquote>
+		
+		
+		<blockquote style="font-size: 18px; line-height: 190%;">
+		<ul class="container">
+			<li>REPETITION is the use of similar or connected pictorial elements.  
+			For example, similar shapes, colours or lines that are used more than once.</li>  
+
+			<li>REPETITION can be regular or irregular and even or uneven.</li>
+
+			<li>REPETITION can be in the form of radiation where the repeated elements spread out from a central point. 
+			repetition may be in the form of gradation where the repeated elements slowly become smaller or larger. </li>
+			
+			<li>REPETITION works with pattern to make the artwork seem active. 
+			The repetition of elements of design creates unity within the artwork.</li>
+
+			<li>Patterns often occur in nature, and artists use similar repeated motifs to create pattern in their work. 
+			Pattern increases visual excitement by enriching surface interest.</li>
+
+
+			<footer>The quoted text above is from 
+				<a class="btn-link" target="_blank"
+				href="https://visscom.wordpress.com/2013/04/16/principle-of-repetition-pattern/">VISSCOM
+				</a>
+				<div id="snackbar" style="font-size: 18px;">Click the Image to Enlarge it</div>
+				<!--Modal-->
+				<div id="myModal" class="modal">
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="caption"></div>
+				</div>
+			</footer>
+			
+			<!--Link to Inspired Image-->
+			<a class="btn btn-primary" target="_blank" style="margin-left: 6px;"
+			href="https://teara.govt.nz/en/photograph/45017/gordon-walters">
+				Image-Reference
+			</a><h6 class="pull-left" style="color: grey;"> - Made With Adobe Illustrator </h6>
+			<p>			
+		
+		</ul>
+		</blockquote>
+		
+		</div>
+	
+	</div>
+	</section>
+	
+	<!--Footer-->
+	<section class="container footer">
+		<footer>
+		<br>
+		<h4><strong>Learn More</strong></h4>
+		<br>
+		<div class="btn-group btn-group-md btn-group-justified" style="margin: auto; width: 66%;">
+			<a href="contrast.html" target="_blank" class="btn btn-default">Contrast</a>
+			<a href="alignment.html" target="_blank" class="btn btn-default">Alignment</a>
+			<a href="proximity.html" target="_blank" class="btn btn-default">Proximity</a>
+		</div>
+		<br>
+		<p style="color: grey;"> © C.R.A.P. Design Principles 2017</p>
+		</footer>
+	</section>
+
+<!--SnackBar JS-->
+<script>
+   var x = document.getElementById("snackbar")
+   x.className = "show";
+   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+</script>
+<!--Modal JS-->
+<script>
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+</script>
+</body>
+</html>

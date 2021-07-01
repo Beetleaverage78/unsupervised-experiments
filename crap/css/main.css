@@ -1,0 +1,156 @@
+/*Main CSS - This CSS will be constantly used throughout all html pages*/
+@import url('https://fonts.googleapis.com/css?family=Cabin|Ubuntu|Nobile');
+body {
+	background-color: white;
+	font-family: 'Cabin', sans-serif;
+	font-size: 18px;
+}
+.navimg {
+	background-color: #5e0371;
+	background-size: cover;
+	height: 270px;
+}
+.heading {border-bottom: none; color: white;}
+.active {
+	border-bottom: 4px solid white;
+}
+.navbar-inverse {
+	font-size: 14px;
+	border: none;
+	border-radius: 0px;
+    background-color: #290032;
+	font-family: 'Cabin', sans-serif;
+}
+.navbar-toggle {border: none;}
+@media screen{.navbar-toggle:link, .navbar-toggle:visited, .navbar-toggle:hover, .navbar-toggle:active, .navbar-toggle:focus{
+  background:none !important;
+  border: none !important;
+  outline: none !important;
+}
+.footer {
+	color: black;
+	text-align: center; 
+	background-color: #e5e5e5;
+	margin-top: 10px; 
+	padding: 10px; 
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+.white {color: white;}
+.ubuntu {
+	font-family: 'Ubuntu', sans-serif;
+}
+/*Modal/Image Enlargement*/
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+.modal-content {
+    margin: auto;
+    display: block;
+	border-radius: 6px;
+	-webkit-box-shadow: -1px -1px 215px -22px rgba(143,143,143,1);
+	-moz-box-shadow: -1px -1px 215px -22px rgba(143,143,143,1);
+	box-shadow: -1px -1px 215px -22px rgba(143,143,143,1);
+    width: 80%;
+    max-width: 700px;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 60px;
+    font-weight: bold;
+	opacity: 1;
+    transition: 0.3s;
+	color: white;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+	color: #ff0000;
+	opacity: 1;
+}
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/*SnackBar - To prompt user */
+#snackbar {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #5e0371; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+}
+#snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3.6;
+    animation: fadein 0.5s, fadeout 0.5s 3.6s;
+}
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+/*Index Page CSS - Individual CSS for Index*/
+.bannerbox {
+	opacity: 0.9;
+	border-radius: none;
+}
+.bannerbox:hover {
+	opacity: 1;
+}
+
+

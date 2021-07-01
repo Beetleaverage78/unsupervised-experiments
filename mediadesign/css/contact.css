@@ -1,0 +1,82 @@
+/* Contact Page CSS =================================*/
+body {background-color: #9bb0d1;height: auto;}
+.center-boxes {margin-top: 40px;color: black;}
+.center-boxes .row {
+	max-width: 1300px;
+    height: auto;
+    margin: auto;
+}
+.box {position: absolute;}
+
+/* Inner Box (Contact CSS) =================================*/
+.inner {
+    background-color: white;
+    border: 2px solid black;
+	padding: 60px 12px 60px 60px;
+    width: auto;
+    z-index: 0;
+}
+
+.inner  h2 {font-family: 'Montserrat', sans-serif;}
+.inner input {
+	padding: 12px;
+	border: 2px solid black;
+    font-family: 'Capriola', serif;
+	
+}
+textarea {
+	width: 100%;
+	height: 250px;
+	margin-top: 5px;
+	padding: 12px 12px;
+	box-sizing: border-box;
+	border: 2px solid black;
+    font-family: 'Capriola', serif;
+	background-color: #f8f8f8;
+	resize: none;
+}
+
+.inner button {
+    margin-top: 5px;
+    background-color: #212329;
+    border: 2px solid grey;
+    color: white;
+}
+
+.inner button:hover {color: black; background-color: white; cursor: pointer; border: 2px solid black;}
+
+/* Outer Box (Form CSS) =================================*/
+.outer {
+    margin-top: 40px;
+    border: 2px solid black;
+    background-color: #566495;
+    font-family: 'Capriola', serif;
+    width: 400px;
+    height: auto;
+    z-index: 1;
+    color: white;
+}
+
+.outer h2 {ont-family: 'Montserrat', sans-serif;}
+.outer img {float: left;width: 50px;}
+.outer p a {
+    float: center;
+    margin-top: 10px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.outer p a:hover {text-decoration: underline;}
+.scn-contact {color: #9bb0d1;font-size: 12px;}
+.scn-contact:hover {text-decoration: underline;}
+.uni-links a {color: white;text-decoration: none;}
+
+/* Responsive CSS =================================*/
+@media only screen and (max-width: 1300px) {
+    body {background-color: #414d61;color: black;}
+    .outer {padding: 10px;margin-left: 0px;width: 380px;}
+    .inner {width: 380px;margin-top: 500px;padding: 10px;}
+    .box-small {position: absolute;}
+    .center-boxes .row {max-width: 400px;margin: auto;}
+}
+

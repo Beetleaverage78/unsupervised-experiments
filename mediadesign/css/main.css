@@ -1,0 +1,169 @@
+/* Import Font Styles*/
+@import url('https://fonts.googleapis.com/css?family=Capriola|Montserrat|Overpass|Raleway&display=swap');
+
+body {
+  margin: 0;
+  color: white;
+  background-color: white;
+  height: 1200px;
+}
+.logo {
+	width: 150px;
+	padding: 10px;
+}
+/* Overlay Navigation Bar */
+.overlay  {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  font-family: 'Raleway', sans-serif;
+  top: 0;
+  left: 0;
+  background-color: rgba(13, 14, 16, 0.95);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-content .active {
+	color: white;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #566495;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  right: 22px;
+  top: -26px;
+  font-size: 80px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.burger-icon img {
+    float: right;
+	margin-right: 10px;
+    width: 80px;
+    z-index: 2;
+}
+.burger-icon:hover {
+	color: #566495;
+	cursor: pointer;
+}
+/* Parallax CSS */
+#parallax-container {
+  display: block;
+  height: 700px;
+}
+
+#parallax-container div {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  background-position: center !important;
+  transform: translateY(0px);
+  height: 750px;
+  width: 100%;
+}
+
+/* Content CSS */
+/*====================================================*/
+/* Important Elements */
+.separator {
+  width: 300px;
+  margin: auto;
+  border-bottom: 2px solid black;
+}
+button {
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 6px 40px 6px 40px;
+}
+button a {text-decoration: none;color: black;}
+button:hover {border: 2px solid black;cursor: pointer;}
+
+/* Main Section CSS */
+#main-section {
+  margin-top: -100px;
+  position: relative;
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 40px 100px 100px 100px;
+}
+#main-section h1 {
+  font-size: 36px;
+  font-family: 'Markazi Text', serif;
+}
+#main-section p {
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+/* About Section CSS*/
+#about-section {
+  background-color: #394262;
+  text-align: center;
+  padding: 100px 60px 100px 60px;
+}
+#about-section h1 {
+  font-size: 26px;
+  font-family: 'Capriola', serif;
+}
+#about-section p {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 18px;
+  font-family: 'Raleway', serif;
+}
+
+/* Footer Section CSS*/
+#footer-section {
+	background-color: #566495;
+	padding: 30px 60px 10px 60px;
+}
+.box {
+  padding: 10px 50px 50px 30px;
+  background-color: white;
+  color: black;
+}
+.foot-links h1 {
+  font-size: 24px;
+  font-family: 'Overpass', serif;
+  font-weight: bold;
+}
+.foot-links p a {
+  font-family: 'Montserrat', serif;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+.foot-links p a:hover {
+  text-decoration: underline;
+}
