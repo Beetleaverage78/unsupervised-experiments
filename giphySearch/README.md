@@ -1,5 +1,5 @@
 # Giphy Search & Collate
-[GiphySearch](https://ellanbugas.works/unsupervised-experiments/giphySearch/index.html)
+[GiphySearch](https://beetleaverage78.github.io/unsupervised-experiments/giphySearch/index.html)
 is a small web-application that utilizes Giphy's API. It allows you to search for & collect gifs & save them as a zip file. 
 ### Libraries Used
 * [Giphy-API](https://giphy.com/)
