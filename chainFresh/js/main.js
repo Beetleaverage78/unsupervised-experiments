@@ -1,3 +1,14 @@
+/* 
+ * - MARKER NOTES
+ *
+ *  - Most of the stuff here I have reused from previous projects.
+ *  - Don't really have the time to reference each part but some of my projects are.
+ *  
+ *  - https://ellanbugas.works/crap/
+ *  - https://ellanbugas.works/unsupervised-experiments/giphySearch/
+ *  - https://ellanbugas.works/unsupervised-experiments/chainFresh/ - This website is live too.
+ * 
+ */
 // Helper Functions
 function success(msg) {alert(msg);}
 function debug(msg) {console.log("Debug: "+msg);}
@@ -91,7 +102,7 @@ for (var i = 0; i < btnArray.length;i++) {
 }
 
 // Google SpreadSheets Integration for Product Page
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/18O3iVwk2ttJe7ALAZe4PpUwJ7ulWytMKUdP8IdNdkRE/edit?usp=sharing';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSdYbvfUPWKk9DX0s4X9zj0S3pKf9yUuP8sZvL61qg0O4OeWn-EJDwdjQWOfO4YYb5o_gp0gdUkj8ai/pub?output=csv';
 
 /* Runs at the start when all content has been loaded */
 function init() {
@@ -120,16 +131,19 @@ function init() {
   // Only run if current html file is products page.
   if (page == "products.html") {
     debug("Products Page Detected");
-    Tabletop.init({
-      key: publicSpreadsheetUrl,
-      callback: showProducts,
-      simpleSheet: true,
+    Papa.parse(publicSpreadsheetUrl, {
+      download: true,
+      header: true,
+      complete: function(results) {
+        showProducts(results.data);
+      }
     });
   }
 };
 
 /* Dynamically Create Product Cards */
 function showProducts(data, tabletop) {
+  console.log(data)
   var products = document.querySelector(".is-multiline")
 
   data.forEach(async function (e) {
